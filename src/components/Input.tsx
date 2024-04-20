@@ -11,6 +11,7 @@ export default function Input({ value, onChange }: InputProps) {
       min={0}
       type="number"
       value={value}
+      step={1}
       onChange={(e) => onChange(+e.target.value)}
       id="numberInput"
       className="

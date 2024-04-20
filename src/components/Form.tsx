@@ -11,12 +11,11 @@ export default function Form() {
   async function handleSubmit(e: any) {
     e.preventDefault()
     try {
-      const res = await fetch('/busca', {
-        method: 'POST',
+      const res = await fetch(`http://localhost:4000/busca/${number}`, {
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(number),
       });
 
       if (!res.ok) {
@@ -31,7 +30,7 @@ export default function Form() {
   }
 
   return (
-    <form action=""
+    <form
       onSubmit={(e) => handleSubmit(e)}
       className="
         flex-col-center gap-8
