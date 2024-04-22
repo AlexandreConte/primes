@@ -1,6 +1,15 @@
-export default function Button() {
+interface ButtonProps {
+  buttonName: string
+  handleClick?: () => void
+  id?: string
+}
+
+export default function Button({ buttonName, handleClick, id }: ButtonProps) {
   return (
-    <button type="submit"
+    <button
+      id={id ?? ""}
+      onClick={handleClick ?? undefined}
+      onKeyDown={e => e.key === "Enter" && handleClick}
       className="
         flex-col-center text-center
         mx-auto
@@ -10,7 +19,7 @@ export default function Button() {
         p-1.5
         hover:saturate-200
       ">
-      Buscar
+      {buttonName}
     </button>
   )
 }

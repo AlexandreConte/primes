@@ -1,19 +1,22 @@
 "use client"
-
 interface InputProps {
-  value: number
-  onChange: (value: number) => void
+  value?: number
+  min?: number
+  id?: string
+  onChange: (value: any) => void
+  onKeyDown?: () => void
 }
 
-export default function Input({ value, onChange }: InputProps) {
+export default function Input({ value, min, id, onChange, onKeyDown }: InputProps) {
   return (
     <input
-      min={0}
+      min={min ?? undefined}
+      onKeyDown={(e) => e.key === "Enter" && onKeyDown!()}
       type="number"
       value={value}
       step={1}
-      onChange={(e) => onChange(+e.target.value)}
-      id="numberInput"
+      onChange={(e) => onChange(e)}
+      id={id}
       className="
         flex-col-center text-right
         mx-auto
