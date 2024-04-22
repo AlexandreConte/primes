@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export type SearchType = {
   k: number
   primeNumbersLessThanK: number[]
+  timer: number
 }
 
 export default function useHistory() {

@@ -12,7 +12,7 @@ export default function History() {
   function renderPrimeNumbers(prime: number | undefined, i: number, arr: number[]) {
     return (
       <>
-        {prime !== undefined ? (
+        {prime ? (
           <li key={`${prime}-${i}`}>
             {prime}{arr[i] !== arr[arr.length - 1] ? (<span className="mr-2">,</span>) : ""}
           </li>
@@ -25,6 +25,7 @@ export default function History() {
     return (
       <div key={`k${search.k},${index}`}>
         <h2>Números primos menores que {search.k}:</h2>
+        <span>Processo demorou: {search.timer.toFixed(5)} milisegundos.</span>
         <ol className="flex-center">
           {search.primeNumbersLessThanK?.map((it, i, arr) => renderPrimeNumbers(it, i, arr))}
         </ol>
