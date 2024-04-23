@@ -50,8 +50,13 @@ export default function History({ history }: HistoryProps) {
         <div className="bg-[#222222] px-8 py-4 rounded-md">
           Busca {history.length - index}
           <hr className="mb-2" />
-          <h2 className="flex">
-            <span>{search.primeNumbersLessThanK.length} Números Primos Menores que{renderKColored(search.k)}encontrados</span>
+          <h2 className="flex-center">
+            <span className="w-full flex-center gap-[2px]">
+              <span className="text-green-400 font-black">
+                {search.primeNumbersLessThanK.length}
+              </span>
+              <span>Números Primos Menores que{renderKColored(search.k)}encontrados</span>
+            </span>
           </h2>
           {/* <ol className="flex flex-wrap">
             {
