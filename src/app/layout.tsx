@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={`
         ${inter.className}
-        secondary-color w-screen min-h-screen
+          secondary-color w-screen min-h-screen
       `}>
         {children}
       </body>

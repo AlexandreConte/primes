@@ -21,7 +21,8 @@ export default function Input({ value, min, id, onChange, onKeyDown }: InputProp
         flex-col-center text-right
         mx-auto
         p-1.5
-        w-40
+        min-w-[80px]
+        w-[80%]
         outline-none
         text-black
         bg-zinc-400

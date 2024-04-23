@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+  background-image: url("../../public/static/image/bg.jpg");
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
 .flex-center {
   @apply flex justify-center items-center;
 }
@@ -19,5 +26,5 @@
 }
 
 .secondary-color {
-  @apply bg-[#2d3047];
+  @apply bg-[#15151acb];
 }
