@@ -49,3 +49,6 @@ Enquanto que no TailwindCSS, basta aplicar ao seu elemento HTML as classes:
 - A interface gráfica faz uma requisição para a API do website, envia o número informado pelo usuário e encontra os números primos positivos menores que ele, retornando a quantidade de números primos, quais são, e a duração dos cálculos realizados no back-end.
 
 ![GIF da pagina](https://github.com/AlexandreConte/primes/assets/84075891/a9de964f-494f-4164-a4aa-26a56c7a21f9)
+
+## Acesso a pagina web
+Pode acessar a pagina web hospedada na vercel [aqui](https://primes-chi.vercel.app/).
