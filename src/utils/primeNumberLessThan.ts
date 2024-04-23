@@ -1,3 +1,4 @@
+// @return a list of every prime positive number under 'k'
 export default function primeNumbersLessThan(k: number) {
   const primesLess: number[] = [];
 
@@ -10,13 +11,17 @@ export default function primeNumbersLessThan(k: number) {
   return primesLess;
 }
 
-function isPrimeNumber(number: number) {
+// isPrimeNumber(number) => @return boolean
+// @true if the number is prime
+// @false if the number isn't prime
+function isPrimeNumber(k: number) {
   let count = 0;
-  for (let i = 2; i * i <= number; i++) {
-    if (number % i === 0) {
-      count++;
-      break;
+  for (let i = 2; i * i <= k; i++) {
+    if (k % i === 0) {
+      // if the number is divisible, than return false
+      return false
     }
   }
-  return count === 0;
+  // If no number under 'k' is divisible, than it's a prime number
+  return true;
 }
